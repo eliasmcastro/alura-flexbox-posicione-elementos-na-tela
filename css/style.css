@@ -1,3 +1,4 @@
+/*-- GLOBAL --*/
 body {
   background-color: #f2f5f7;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -8,23 +9,34 @@ body {
   margin: 0 auto;
 }
 
-.cabecalhoPrincipal {
+/*-- HEADER --*/
+.header {
   background-color: #fff;
   padding: 20px 0;
 }
 
-.cabecalhoPrincipal-titulo {
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .title {
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-.cabecalhoPrincipal-titulo a {
+.header .title a {
   text-decoration: none;
   color: inherit;
 }
 
-.cabecalhoPrincipal-nav-link {
+.header .nav {
+  display: flex;
+}
+
+.header .nav .nav-link {
   padding: 10px;
   margin-bottom: 10px;
   color: #9799a6;
@@ -32,23 +44,32 @@ body {
   text-decoration: none;
   transition: 0.5s;
   display: block;
-
   border-bottom: 1px solid #9799a6;
 }
 
-.conteudoPrincipal {
+/*-- CONTENT --*/
+.content {
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.subtitulo {
+.content .container {
+  margin-bottom: 10px;
+}
+
+.content .subtitle {
   font-weight: bold;
   font-size: 32px;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.conteudoPrincipal-cursos-link {
+.content .courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .courses .courses-link {
+  width: 23%;
   height: 100px;
   background-color: #fff;
   text-align: center;
@@ -58,7 +79,19 @@ body {
   position: relative;
 }
 
-.conteudoPrincipal-cursos-link a {
+.content .courses .courses-link:hover {
+  box-shadow: 4px 4px 4px #ccc;
+}
+
+.content .courses .courses-link:nth-child(4n) {
+  margin-right: 0;
+}
+
+.content .courses .courses-link:nth-child(4n + 1) {
+  margin-left: 0;
+}
+
+.content .courses .courses-link a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
@@ -70,11 +103,7 @@ body {
   left: 0;
 }
 
-.conteudoPrincipal-cursos-link:hover {
-  box-shadow: 4px 4px 4px #ccc;
-}
-
-.conteudoPrincipal-cursos-link a:before {
+.content .courses .courses-link a:before {
   content: '';
   display: block;
   width: 50px;
@@ -82,128 +111,50 @@ body {
   margin: 10px auto;
 }
 
-.conteudoPrincipal-cursos-link:nth-child(even) a:before {
+.content .courses .courses-link:nth-child(even) a:before {
   background: url(../img/background1.svg) no-repeat;
 }
 
-.conteudoPrincipal-cursos-link:nth-child(odd) a:before {
+.content .courses .courses-link:nth-child(odd) a:before {
   background: url(../img/background2.svg) no-repeat;
 }
 
-.rodapePrincipal {
-  background-color: #324c64;
-  padding-top: 20px;
-}
-
-.rodapePrincipal .subtitulo {
-  color: #fff;
-}
-
-.rodapePrincipal-navMap-link {
-  text-decoration: none;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.rodapePrincipal-navMap-link {
-  font-size: 0.9em;
-}
-
-.navmap-list-title {
-  font-weight: 700;
-  font-size: 1.3em;
-  margin: 0.9em 0;
-  padding-left: 0.3em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-
-.navmap-list-title + .rodapePrincipal-navMap-link {
-  margin-top: 0;
-}
-
-.navmap-list-title-bancoDeDados {
-  color: #ec6e5a;
-  border-left: 4px solid #ec6e5a;
-}
-.navmap-list-title-framework {
-  color: #ad85bf;
-  border-left: 4px solid #ad85bf;
-}
-.navmap-list-title-frontend {
-  color: #5ec6f3;
-  border-left: 4px solid #5ec6f3;
-}
-.navmap-list-title-backend {
-  color: #25d285;
-  border-left: 4px solid #25d285;
-}
-
-.rodapePrincipal-patrocinadores {
-  margin-top: 30px;
-  background: #f2f5f7;
-  padding: 20px 0;
-}
-
-.rodapePrincipal-contatoForm {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.rodapePrincipal-contatoForm label[for='email-contato'] {
-  font-weight: bold;
-  font-size: 14px;
-  color: #000;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.rodapePrincipal-contatoForm-emailInput {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding: 10px;
-}
-
-.rodapePrincipal-contatoForm-submit {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #4dba7a;
-  color: #fff;
-  cursor: pointer;
-}
-
-.rodapePrincipal-contatoForm-submit,
-.rodapePrincipal-contatoForm-emailInput {
-  outline: 0;
-  border: 1px solid #4dba7a;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.videoSobre {
+/*-- ABOUT --*/
+.about {
   background-color: #5e9edc;
   padding: 25px 0;
 }
 
-.videoSobre-video {
-  max-width: 100%;
-}
-
-.videoSobre .container {
+.about .container {
+  display: flex;
   color: #fff;
 }
 
-.videoSobre-sobre-title {
-  font-size: 1.2em;
-  font-weight: bolder;
+.about .video {
+  flex-grow: 1;
+  flex-shrink: 2;
+  max-width: 100%;
 }
 
-.videoSobre-sobre {
+.about .advantages {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
   font-size: 1.3em;
   line-height: 2;
 }
 
-.videoSobre-button {
+.about .advantages .title {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.about .advantages .advantages-list {
+  flex-grow: 1;
+}
+
+.about .advantages button {
   border-radius: 8px;
   background-color: #ec6e5a;
   display: block;
@@ -214,78 +165,282 @@ body {
   outline: none;
 }
 
-.rodapePrincipal-contatoForm-legend {
+/*-- FOOTER --*/
+.footer {
+  background-color: #324c64;
+  padding-top: 20px;
+}
+
+/*-- Map Site --*/
+.footer .map .subtitle {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer .map .map-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.footer .map .map-list .map-title {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 0.9em 0;
+  padding-left: 0.3em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.footer .map .map-list .map-title-backend {
+  color: #25d285;
+  border-left: 4px solid #25d285;
+}
+
+.footer .map .map-list .map-title-frontend {
+  color: #5ec6f3;
+  border-left: 4px solid #5ec6f3;
+}
+
+.footer .map .map-list .map-title-framework {
+  color: #ad85bf;
+  border-left: 4px solid #ad85bf;
+}
+
+.footer .map .map-list .map-title-database {
+  color: #ec6e5a;
+  border-left: 4px solid #ec6e5a;
+}
+
+.footer .map .map-list .map-title + .map-link {
+  margin-top: 0;
+}
+
+.footer .map .map-list .map-link {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/*-- Patreon --*/
+.patreon {
+  margin-top: 30px;
+  background: #f2f5f7;
+  padding: 20px 0;
+}
+
+.patreon .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patreon .patreon-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin-right: 5%;
+}
+
+/*-- Contact Form --*/
+.contact-form {
+  width: 25%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-form legend {
   margin-bottom: 10px;
 }
 
+.contact-form .fieldset {
+  display: flex;
+}
+
+.contact-form label[for='email-contato'] {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+}
+
+.contact-form button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #4dba7a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form input, 
+.contact-form button {
+  outline: 0;
+  border: 1px solid #4dba7a;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
 @media (min-width: 769px) {
+  /*-- GLOBAL --*/
   .container {
     width: 85%;
   }
 
-  .subtitulo {
-    text-align: left;
-  }
-
-  .cabecalhoPrincipal-nav-link {
+  /*-- HEADER --*/
+  .header .nav .nav-link {
     border-radius: 5px;
     border: 1px solid #9799a6;
   }
 
-  .cabecalhoPrincipal-nav-link:hover {
+  .header .nav .nav-link:hover {
     color: #fff;
     background-color: #9799a6;
   }
 
-  .cabecalhoPrincipal-titulo {
+  .header .title {
     margin: 0;
   }
 
-  .cabecalhoPrincipal-nav {
+  .header .nav {
     width: auto;
   }
 
-  .cabecalhoPrincipal-nav-link {
+  .header .nav .nav-link {
     width: auto;
     margin: 0 0 0 10px;
   }
 
-  .rodapePrincipal-contatoForm {
-    margin-top: 0;
+  /*-- CONTENT --*/
+  .content .subtitle {
     text-align: left;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(3n) {
-    margin-right: 0;
+  /*-- FOOTER --*/
+  .footer .map .subtitle {
+    text-align: left;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(3n + 1) {
-    margin-left: 0;
+  .contact-form {
+    margin-top: 0;
+    text-align: left;
   }
 }
 
 @media (min-width: 1000px) {
-  .conteudoPrincipal-cursos-link {
+  /*-- CONTENT --*/
+  .content .courses .courses-link {
     margin: 1.333%;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(3n) {
+  .content .courses .courses-link:nth-child(3n) {
     margin-right: 1.33%;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(3n + 1) {
+  .content .courses .courses-link:nth-child(3n + 1) {
     margin-left: 1.333%;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(4n) {
+  .content .courses .courses-link:nth-child(4n) {
     margin-right: 0;
   }
 
-  .conteudoPrincipal-cursos-link:nth-child(4n + 1) {
+  .content .courses .courses-link:nth-child(4n + 1) {
     margin-left: 0;
   }
 
-  .videoSobre-sobre {
+  /*-- ABOUT --*/
+  .about .advantages {
     margin-left: 1.5em;
+  }
+}
+
+@media (max-width: 960px) {
+  /*-- CONTENT --*/
+  .content .courses .courses-link {
+    width: 49%;
+  }
+
+  .content .courses .courses-link:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .content .courses .courses-link:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+
+  /*-- FOOTER --*/
+  .contact-form {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  /*-- HEADER --*/
+  .header .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+  }
+
+  .header .nav {
+    flex-direction: column;
+  }
+
+  .header .nav .nav-link-app {
+    order: -1;
+  }
+
+  /*-- CONTENT --*/
+  .content .courses {
+    flex-direction: column;
+  }
+
+  .content .courses .courses-link {
+    width: 100%;
+    margin: 1% 0;
+  }
+
+  /*-- ABOUT --*/
+  .about .container {
+    flex-direction: column;
+  }
+
+  .about .video {
+    margin: 0 auto;
+  }
+
+  /*-- FOOTER --*/
+  .footer .map .map-list {
+    height: auto;
+  }
+
+  .patreon .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .patreon .patreon-list {
+    margin: 0;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form .fieldset {
+    justify-content: center;
   }
 }
