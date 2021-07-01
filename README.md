@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Flexbox: Posicione elementos na tela da Alura
+  Flexbox: Posicione elementos na tela
 </h3>
 
 <p align="center">Aprenda a famosa especificação flexible box para posicionar seus elementos na página e entenda as diversas propriedades do flexbox e como usá-la</p>
@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="#como-executar-o-projeto">Como executar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#conteudo-do-curso">Conteúdo do curso</a>
+  <a href="#conteúdo-do-curso">Conteúdo do curso</a>
 </p>
 
 <br>
