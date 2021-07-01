@@ -182,12 +182,16 @@ body {
 
 .footer .map .map-list {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  height: 250px;
+  justify-content: space-between;
 }
 
-.footer .map .map-list .map-title {
+.footer .map .map-list .map-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .map .map-list .map-group .map-title {
   font-weight: 700;
   font-size: 1.3em;
   margin: 0.9em 0;
@@ -196,31 +200,31 @@ body {
   padding-bottom: 0.2em;
 }
 
-.footer .map .map-list .map-title-backend {
+.footer .map .map-list .map-group .map-title-backend {
   color: #25d285;
   border-left: 4px solid #25d285;
 }
 
-.footer .map .map-list .map-title-frontend {
+.footer .map .map-list .map-group .map-title-frontend {
   color: #5ec6f3;
   border-left: 4px solid #5ec6f3;
 }
 
-.footer .map .map-list .map-title-framework {
+.footer .map .map-list .map-group .map-title-framework {
   color: #ad85bf;
   border-left: 4px solid #ad85bf;
 }
 
-.footer .map .map-list .map-title-database {
+.footer .map .map-list .map-group .map-title-database {
   color: #ec6e5a;
   border-left: 4px solid #ec6e5a;
 }
 
-.footer .map .map-list .map-title + .map-link {
+.footer .map .map-list .map-group .map-title + .map-link {
   margin-top: 0;
 }
 
-.footer .map .map-list .map-link {
+.footer .map .map-list .map-group .map-link {
   text-decoration: none;
   color: #fff;
   margin-top: 10px;
@@ -284,7 +288,7 @@ body {
   cursor: pointer;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form button {
   outline: 0;
   border: 1px solid #4dba7a;
@@ -381,6 +385,10 @@ body {
   }
 
   /*-- FOOTER --*/
+  .footer .map .map-list .map-group {
+    flex: 50%;
+  }
+
   .contact-form {
     width: 40%;
   }
@@ -422,8 +430,13 @@ body {
   }
 
   /*-- FOOTER --*/
-  .footer .map .map-list {
-    height: auto;
+  .footer .map .map-list .map-group {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .footer .map .map-list .map-group .map-title {
+    border-left: initial;
   }
 
   .patreon .container {
