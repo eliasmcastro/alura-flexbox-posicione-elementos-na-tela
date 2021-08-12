@@ -15,8 +15,6 @@
   <a href="#conteúdo-do-curso">Conteúdo do curso</a>
 </p>
 
-<br>
-
 <p align="center">Front-end</p>
 
 <p align="center">
